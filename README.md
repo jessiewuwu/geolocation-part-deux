@@ -14,7 +14,7 @@
 ### Non-Functional / Acceptance Criteria ###
 * You can keep track of the information the way you think is best: JS framework, JS array, LocalStorage/SessionStorage, NoSQL database, backend...
 * You have to cover all the new code with JS testing. You can pick a framework of your preference like Jasmine, Chai, Mocha, QUnit.
-* If you don't have test coverage on all the code delivered on Part I, you MUST cover that code as well now, otherwise this test will not be accepted.
+* If you don't have test coverage on all the code delivered on Part I, you MUST cover that code as well now.
 * Don't break existing functionality.
 * Feel free to add any extra library to your app.
 
