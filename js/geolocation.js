@@ -59,6 +59,37 @@ function initializePage(){
 	}));
 }
 
+
+
+
+
+
+function getCompanyLocation(){
+	$('#search-button').on('click', function(e){
+		e.preventDefault();
+		console.log('search prevent default works');
+		var formData = $('#search-text-area').val();
+		console.log(formData);
+		$.ajax({
+			url: 'https://freegeoip.net/json/' + formData,
+			type: 'GET',
+			dataType: 'json'
+		})
+		.done(function(data) {
+			console.log("success");
+			console.log(data);
+		})
+		.fail(function() {
+			console.log("error");
+		})
+		.always(function() {
+			console.log("complete");
+		});
+
+	})
+}
+
 $(document).ready(function(){
 	initializePage();
+	getCompanyLocation();
 });

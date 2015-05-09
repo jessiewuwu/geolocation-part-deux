@@ -5,8 +5,8 @@
 * I sometimes use a desktop, sometimes a tablet and sometimes a cell phone, so I need a responsive web page.
 
 ### Business Narrative / Scenario ###
-* GeoLocation is a working web application which aims to retrieve details about the user's location. 
-* You need to augment GeoLocation with a new form that will allow the user to find out the physical location of websites, by displaying its hosting position on a map. 
+* GeoLocation is a working web application which aims to retrieve details about the user's location.
+* You need to augment GeoLocation with a new form that will allow the user to find out the physical location of websites, by displaying its hosting position on a map.
 * This new form will consist in a text field for the user to input the website domain, and also a "Locate" button.
 * You have to keep the current features working.
 
@@ -29,7 +29,7 @@
 You should receive a JSON response from http://freegeoip.net/json/:host similar to:
 
 ```
-{  
+{
    "ip":"170.149.172.130",
    "country_code":"US",
    "country_name":"United States",
@@ -94,3 +94,4 @@ Here are a few suggestions of tools to develop your responsive app:
 1. Test coverage.
 
 We have both functional and non-functional acceptance criterias, so we suggest that you pay attention to both. Furthermore, the quality of the application (number of bugs found), may also add or subtractg points from the candidate.
+

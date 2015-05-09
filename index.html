@@ -6,13 +6,30 @@
 		<script src="js/libs/jquery-1.10.2.min.js"></script>
 		<script src="js/libs/handlebars-v1.3.0.js"></script>
 		<script src="js/geolocation.js"></script>
-
+		<script src="https://maps.googleapis.com/maps/api/js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="css/geolocation.css">
 
 	</head>
 	<body class="container">
 		<h1 id="title">GeoLocation Test</h1>
 		<hr class="divider"></hr>
+		<div class="website-search">
+			<h1>Search for a Company's Physical Location by URL</h1>
+			<form action="get" id="search-form">
+				<label for="company-url">https://</label>
+				<input type="text" name="company-url" placeholder="www.example.com or example.com" id="search-text-area">
+				<input type="submit" value="Locate" id="search-button">
+			</form>
+
+
+
+		</div>
+
+
+
+
 		<section id="mainContent"> </section>
 
 		<script type="text/x-handlebars" id="index">
