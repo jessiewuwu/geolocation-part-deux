@@ -77,7 +77,7 @@ function getCompanyLocation(){
 		})
 		.done(function(data) {
 			console.log("success");
-			console.log(data);
+			renderMap(data);
 		})
 		.fail(function() {
 			console.log("error");
@@ -87,6 +87,12 @@ function getCompanyLocation(){
 		});
 
 	})
+}
+
+function renderMap(data){
+	console.log('render map inside of the ajax function works')
+	$('.website-search').append('<h1>IT WORKS! IT APPENDS!</h1>');
+	console.log(data.latitude);
 }
 
 $(document).ready(function(){
