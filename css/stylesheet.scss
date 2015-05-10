@@ -1,5 +1,74 @@
-$red: red;
+$mainFont: 'Abel', sans-serif;
+$headerFont: 'Crete Round', serif;
+$dark: #49666d;
+$slateblue: #83a5b0;
+$bkgnd: #f3f6f7;
 
 body {
-  background: $red;
+  font-family: $mainFont;
+  text-align: center;
+  background: $bkgnd;
+}
+
+h1#title {
+  font-family: $headerFont;
+  font-size: 4.5em;
+}
+
+.logo {
+  font-size: 41px;
+}
+
+.fa {
+  color: $dark;
+}
+
+.blue-text {
+  color: $dark;
+}
+
+div, button{
+  margin: 0 10px;
+}
+
+.location_value {
+  color: $slateblue;
+}
+
+
+#btnMyLocation, #btnResetLocation {
+  width: 300px;
+  height:50;
+}
+
+table > tbody > tr > td.field_name {
+  text-align: left;
+}
+
+table > tbody > tr > td.location_value {
+  width: 200px;
+}
+
+table.empty .help {
+  visibility: hidden;
+}
+
+#search-text-area {
+  width: 80%;
+}
+
+
+
+
+
+
+
+
+
+#map-canvas {
+  margin: 0 auto;
+  width: 700px;
+  height: 600px;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }

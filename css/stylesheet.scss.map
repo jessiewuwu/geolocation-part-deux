@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,WAAW;EACV,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK",
+"sources": ["geolocation.css"],
+"names": [],
+"file": "stylesheet.scss"
+}

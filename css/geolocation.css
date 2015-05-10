@@ -1,36 +1,48 @@
-*{
-	text-align: center;
-	font-size: 20px;
-}
+body {
+  font-family: "Abel", sans-serif;
+  text-align: center;
+  background: #f3f6f7; }
 
-div, button{
-	margin: 0 10px;
-}
+h1#title {
+  font-family: "Crete Round", serif;
+  font-size: 4.5em; }
+
+.logo {
+  font-size: 41px; }
+
+.fa {
+  color: #49666d; }
+
+.blue-text {
+  color: #49666d; }
+
+div, button {
+  margin: 0 10px; }
+
 .location_value {
-	color: red;
-}
-#title{
-	font-size: 48px;
-}
+  color: #83a5b0; }
 
 #btnMyLocation, #btnResetLocation {
-	width: 300px;
-	height:50;
-}
+  width: 300px;
+  height: 50; }
 
 table > tbody > tr > td.field_name {
-    text-align: left;
-}
+  text-align: left; }
 
 table > tbody > tr > td.location_value {
-    width: 200px;
-}
+  width: 200px; }
 
 table.empty .help {
-    visibility: hidden;
-}
+  visibility: hidden; }
+
+#search-text-area {
+  width: 80%; }
 
 #map-canvas {
-  width: 500px;
-  height: 400px;
-}
+  margin: 0 auto;
+  width: 700px;
+  height: 600px;
+  margin-top: 5%;
+  margin-bottom: 5%; }
+
+/*# sourceMappingURL=geolocation.css.map */
