@@ -29,3 +29,8 @@ table > tbody > tr > td.location_value {
 table.empty .help {
     visibility: hidden;
 }
+
+#map-canvas {
+  width: 500px;
+  height: 400px;
+}
