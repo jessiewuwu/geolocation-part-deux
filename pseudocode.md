@@ -48,4 +48,5 @@ Sunday - design + meeting requirements
 - Make it look prettier and more cohesive
 - Testing
 - ReadMe
-- error-handling
+- error-handling for URL:
+^([a-zA-Z0-9]+(\.[a-zA-Z0-9]+)+.*)$
