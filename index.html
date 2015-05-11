@@ -2,19 +2,24 @@
 <html lang="en">
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 		<script src="js/libs/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="js/libs/underscore.js"></script>
+		<script type="text/javascript" src="js/libs/backbone.js"></script>
 		<script src="js/libs/handlebars-v1.3.0.js"></script>
 		<script src="js/geolocation.js"></script>
 		<script src="https://maps.googleapis.com/maps/api/js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="css/geolocation.css">
+		<link href='http://fonts.googleapis.com/css?family=Abel|Crete+Round' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<title>GeoLocation</title>
 
 	</head>
 	<body class="container">
-		<h1 id="title">GeoLocation Test</h1>
+		<h1 id="title">GeoL<span class="logo"><i class="fa fa-compass"></i></span>cation Test </h1>
 		<hr class="divider"></hr>
+
 		<div class="website-search">
 			<h1>Search for a Company's Physical Location by URL</h1>
 			<form action="get" id="search-form">
@@ -22,12 +27,11 @@
 				<input type="text" name="company-url" placeholder="www.example.com or example.com" id="search-text-area">
 				<input type="submit" value="Locate" id="search-button">
 			</form>
-
-
-
 		</div>
 
+		<div id="map-canvas">
 
+		</div>
 
 
 		<section id="mainContent"> </section>
