@@ -4,31 +4,97 @@ $dark: #49666d;
 $slateblue: #83a5b0;
 $bkgnd: #f3f6f7;
 
+
 body {
   font-family: $mainFont;
-  text-align: center;
   background: $bkgnd;
+  margin: 0;
 }
 
-h1#title {
-  font-family: $headerFont;
-  font-size: 4.5em;
+/*div {
+  border: 1px solid pink;
+}*/
+
+.header {
+  text-align: center;
+  background: $slateblue;
+
+  h1#title {
+    color: white;
+    letter-spacing: 1px;
+    font-family: $headerFont;
+    font-size: 3em;
+
+  }
+  .logo {
+    font-size: 30px;
+  }
+
+  .fa {
+    color: $dark;
+  }
 }
 
-.logo {
-  font-size: 41px;
+
+.website-search {
+  text-align: center;
+  h1 {
+  font-size: 5.5em;
+  font-family: $mainFont;
+  font-weight: bolder;
+  margin: 5%;
+  }
 }
 
-.fa {
-  color: $dark;
+.search{
+  text-align: left;
+  position: relative;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  #search-text-area {
+    width: 69%;
+  }
 }
 
-.blue-text {
-  color: $dark;
+#search-button, #btnMyLocation, #btnResetLocation {
+  background: $slateblue;
+  color: white;
+  border-style: none;
+
 }
 
-div, button{
-  margin: 0 10px;
+.results-section {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.user-location {
+  margin-top: 3%;
+  margin-bottom: 5%;
+
+}
+
+.user-location h4, #map-canvas h4 {
+    margin-top: 4px;
+    text-align: center;
+    font-family: $headerFont;
+    border: 2px solid black;
+}
+
+#map-canvas {
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  height: 500px;
+  margin-top: 6%;
+  margin-bottom: 5%;
+}
+
+
+.content-section {
+  /*background: white;*/
+  width: 80%;
+  margin: 0 auto;
 }
 
 .location_value {
@@ -37,8 +103,8 @@ div, button{
 
 
 #btnMyLocation, #btnResetLocation {
-  width: 300px;
-  height:50;
+  width: 35%;
+  margin: 2%;
 }
 
 table > tbody > tr > td.field_name {
@@ -53,9 +119,6 @@ table.empty .help {
   visibility: hidden;
 }
 
-#search-text-area {
-  width: 80%;
-}
 
 
 
@@ -65,10 +128,39 @@ table.empty .help {
 
 
 
-#map-canvas {
-  margin: 0 auto;
-  width: 700px;
-  height: 600px;
-  margin-top: 5%;
-  margin-bottom: 5%;
+
+/* ----------- responsiveness on phones, tablets, etc ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .header {
+      font-size: 75%;
+    }
+    .website-search {
+      margin-left: 5%;
+      margin-right: 5%;
+      h1 {
+      font-size: 2em;
+      }
+      h3 {
+        font-size: 1.25em;
+      }
+      #search-text-area {
+        width: 65%;
+      }
+    }
+    .search {
+      padding-bottom: 3%;
+    }
+    #btnMyLocation, #btnResetLocation {
+      width: 70%;
+      margin-top: 4%;
+    }
+    #results-section {
+      width: 50%;
+    }
+
 }

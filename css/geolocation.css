@@ -1,30 +1,78 @@
 body {
   font-family: "Abel", sans-serif;
+  background: #f3f6f7;
+  margin: 0; }
+
+/*div {
+  border: 1px solid pink;
+}*/
+.header {
   text-align: center;
-  background: #f3f6f7; }
+  background: #83a5b0; }
+  .header h1#title {
+    color: white;
+    letter-spacing: 1px;
+    font-family: "Crete Round", serif;
+    font-size: 3em; }
+  .header .logo {
+    font-size: 30px; }
+  .header .fa {
+    color: #49666d; }
 
-h1#title {
+.website-search {
+  text-align: center; }
+  .website-search h1 {
+    font-size: 5.5em;
+    font-family: "Abel", sans-serif;
+    font-weight: bolder;
+    margin: 5%; }
+
+.search {
+  text-align: left;
+  position: relative;
+  padding-top: 2%;
+  padding-bottom: 2%; }
+  .search #search-text-area {
+    width: 69%; }
+
+#search-button, #btnMyLocation, #btnResetLocation {
+  background: #83a5b0;
+  color: white;
+  border-style: none; }
+
+.results-section {
+  display: table-cell;
+  vertical-align: middle; }
+
+.user-location {
+  margin-top: 3%;
+  margin-bottom: 5%; }
+
+.user-location h4, #map-canvas h4 {
+  margin-top: 4px;
+  text-align: center;
   font-family: "Crete Round", serif;
-  font-size: 4.5em; }
+  border: 2px solid black; }
 
-.logo {
-  font-size: 41px; }
+#map-canvas {
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  height: 500px;
+  margin-top: 6%;
+  margin-bottom: 5%; }
 
-.fa {
-  color: #49666d; }
-
-.blue-text {
-  color: #49666d; }
-
-div, button {
-  margin: 0 10px; }
+.content-section {
+  /*background: white;*/
+  width: 80%;
+  margin: 0 auto; }
 
 .location_value {
   color: #83a5b0; }
 
 #btnMyLocation, #btnResetLocation {
-  width: 300px;
-  height: 50; }
+  width: 35%;
+  margin: 2%; }
 
 table > tbody > tr > td.field_name {
   text-align: left; }
@@ -35,14 +83,30 @@ table > tbody > tr > td.location_value {
 table.empty .help {
   visibility: hidden; }
 
-#search-text-area {
-  width: 80%; }
+/* ----------- responsiveness on phones, tablets, etc ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .header {
+    font-size: 75%; }
 
-#map-canvas {
-  margin: 0 auto;
-  width: 700px;
-  height: 600px;
-  margin-top: 5%;
-  margin-bottom: 5%; }
+  .website-search {
+    margin-left: 5%;
+    margin-right: 5%; }
+    .website-search h1 {
+      font-size: 2em; }
+    .website-search h3 {
+      font-size: 1.25em; }
+    .website-search #search-text-area {
+      width: 65%; }
+
+  .search {
+    padding-bottom: 3%; }
+
+  #btnMyLocation, #btnResetLocation {
+    width: 70%;
+    margin-top: 4%; }
+
+  #results-section {
+    width: 50%; } }
 
 /*# sourceMappingURL=geolocation.css.map */
