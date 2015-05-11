@@ -1,20 +1,49 @@
 // google maps
-function initialize(latitude, longitude) {
-	$('#map-canvas').empty();
-	var myLatLng = new google.maps.LatLng(latitude,longitude);
-  var mapCanvas = document.getElementById('map-canvas');
-  var mapOptions = {
-    center: myLatLng,
-    zoom: 16,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  }
-  var map = new google.maps.Map(mapCanvas, mapOptions)
-	var marker = new google.maps.Marker({
-		position: myLatLng,
-		map: map,
-		// icon: 'http://oi62.tinypic.com/2mhu3rr.jpg'
-	});
-	google.maps.event.addDomListener(window, 'load', initialize);
+	var locations = [
+		['company location'],
+		['user location']
+	];
+
+	function initialize(latitude, longitude) {
+		$('#map-canvas').empty();
+		var myLatLng = new google.maps.LatLng(latitude,longitude);
+		var bounds = new google.maps.LatLngBounds();
+	  var mapCanvas = document.getElementById('map-canvas');
+	  var mapOptions = {
+	    center: myLatLng,
+	    zoom: 12,
+	    mapTypeId: google.maps.MapTypeId.ROADMAP
+	  }
+	  var map = new google.maps.Map(mapCanvas, mapOptions)
+		var marker = new google.maps.Marker({
+			position: myLatLng,
+			map: map,
+			// icon: 'http://oi62.tinypic.com/2mhu3rr.jpg'
+		});
+
+		google.maps.event.addDomListener(window, 'load', initialize);
+		var infowindow = new google.maps.InfoWindow();
+
+		var marker, i;
+
+		for(i=0; i < locations.length; i++){
+			var position = new google.maps.LatLng(locations[i][1], locations[i][2]);
+			bounds.extend(position);
+			marker = new google.maps.Marker({
+				position: position,
+				map: map,
+				title: locations[i][0]
+			});
+			// this should center and zoom the area between the company and the user's location but it is giving an infinite loop error
+			// map.fitBounds(bounds);
+			// map.panToBounds(bounds);
+			google.maps.event.addListener(marker, 'click', (function(marker,i){
+				return function(){
+					infowindow.setContent(locations[i][0]);
+					infowindow.open(map, marker);
+				}
+			})(marker,i));
+		}
 }
 
 
@@ -31,6 +60,8 @@ function updateLocationDetails(data){
 	$("#location_lon").html(data.lon);
 
 	initialize(data.lat, data.lon);
+	locations[1][1] = data.lat;
+	locations[1][2] = data.lon;
 
 	$("table").removeClass("empty");
 	$(".help").click(function(e){
@@ -60,6 +91,8 @@ function resetLocationDetails() {
 		lon: ""
 	});
 	$("table").addClass("empty");
+	locations[1][1] = ""
+	locations[1][2] = ""
 }
 
 function initializePage(){
@@ -134,6 +167,8 @@ var CompanyView = Backbone.View.extend({
 				searchCompany.set('longitude', data.longitude);
 				searchCompany.set('latitude', data.latitude);
 				initialize(data.latitude, data.longitude);
+				locations[0][1] = data.latitude;
+				locations[0][2] = data.longitude;
 			})
 			.fail(function() {
 				console.log("error");
