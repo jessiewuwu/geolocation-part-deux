@@ -5,47 +5,45 @@
 	];
 
 	function initialize(latitude, longitude) {
-	$('#map-canvas').empty();
-	var myLatLng = new google.maps.LatLng(latitude,longitude);
-	var bounds = new google.maps.LatLngBounds();
-  var mapCanvas = document.getElementById('map-canvas');
-  var mapOptions = {
-    center: myLatLng,
-    zoom: 12,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  }
-  var map = new google.maps.Map(mapCanvas, mapOptions)
-	var marker = new google.maps.Marker({
-		position: myLatLng,
-		map: map,
-		// icon: 'http://oi62.tinypic.com/2mhu3rr.jpg'
-	});
-	google.maps.event.addDomListener(window, 'load', initialize);
-	var infowindow = new google.maps.InfoWindow();
-
-	var marker, i;
-
-	for(i=0; i < locations.length; i++){
-		var position = new google.maps.LatLng(locations[i][1], locations[i][2]);
-		bounds.extend(position[i]);
-		marker = new google.maps.Marker({
-			positions: position,
+		$('#map-canvas').empty();
+		var myLatLng = new google.maps.LatLng(latitude,longitude);
+		var bounds = new google.maps.LatLngBounds();
+	  var mapCanvas = document.getElementById('map-canvas');
+	  var mapOptions = {
+	    center: myLatLng,
+	    zoom: 12,
+	    mapTypeId: google.maps.MapTypeId.ROADMAP
+	  }
+	  var map = new google.maps.Map(mapCanvas, mapOptions)
+		var marker = new google.maps.Marker({
+			position: myLatLng,
 			map: map,
-			title: locations[i][0]
+			// icon: 'http://oi62.tinypic.com/2mhu3rr.jpg'
 		});
-		google.maps.event.addListener(marker, 'click', (function(marker,i){
-			return function(){
-				infowindow.setContent(locations[i][0]);
-				infowindow.open(map, marker);
-			}
-		})(marker,i));
 
-		map.fitBounds(bounds);
-	}
-	// var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
-	//         this.setZoom(14);
-	//         google.maps.event.removeListener(boundsListener);
-	//    });
+		google.maps.event.addDomListener(window, 'load', initialize);
+		var infowindow = new google.maps.InfoWindow();
+
+		var marker, i;
+
+		for(i=0; i < locations.length; i++){
+			var position = new google.maps.LatLng(locations[i][1], locations[i][2]);
+			bounds.extend(position);
+			marker = new google.maps.Marker({
+				position: position,
+				map: map,
+				title: locations[i][0]
+			});
+			// this should center and zoom the area between the company and the user's location but it is giving an infinite loop error
+			// map.fitBounds(bounds);
+			// map.panToBounds(bounds);
+			google.maps.event.addListener(marker, 'click', (function(marker,i){
+				return function(){
+					infowindow.setContent(locations[i][0]);
+					infowindow.open(map, marker);
+				}
+			})(marker,i));
+		}
 }
 
 
