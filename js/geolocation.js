@@ -63,6 +63,7 @@ function updateLocationDetails(data){
 	locations[1][1] = data.lat;
 	locations[1][2] = data.lon;
 
+
 	$("table").removeClass("empty");
 	$(".help").click(function(e){
 		var fieldName = $(e.currentTarget).closest('tr').find('.field_name').text();
@@ -93,6 +94,13 @@ function resetLocationDetails() {
 	$("table").addClass("empty");
 	locations[1][1] = ""
 	locations[1][2] = ""
+
+	if(locations[0][1] && locations[0][2] !== ""){
+		initialize(locations[0][1], locations[0][2]);
+	}else{
+		// initialize(39, -95);
+		// zoom out and center on the entire United States
+	}
 }
 
 function initializePage(){

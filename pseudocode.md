@@ -43,3 +43,9 @@ Sunday - design + meeting requirements
   # delete the values inside array[1]: ['user location', lat, long] to ['user location']
 
 
+## BUGS
+1. Given two locations, the map only focuses on the location last clicked.
+2. The GeoIP API doesn't give an exact latitude and longitude because it rounds up after the tenth decimal, which makes the location inaccurate by a few blocks.
+  * Possible Solution - find a better API that gives exact latitude and longitude
+  * Possible Solution - instead of using a pinpoint, use a circle range to cover a broad area (about 5x5 block radius).
+3. After clicking Reset Location, the Map pinpoints the ocean. Instead, it should zoom out and center on the entire United States.
