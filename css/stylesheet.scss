@@ -4,31 +4,60 @@ $dark: #49666d;
 $slateblue: #83a5b0;
 $bkgnd: #f3f6f7;
 
+
 body {
   font-family: $mainFont;
-  text-align: center;
   background: $bkgnd;
+  margin: 0;
+  overflow-x: hidden;
 }
 
-h1#title {
-  font-family: $headerFont;
-  font-size: 4.5em;
+.header {
+  text-align: center;
+  background: $slateblue;
+
+  h1#title {
+    color: white;
+    letter-spacing: 1px;
+    font-family: $headerFont;
+    font-size: 3em;
+
+  }
+  .logo {
+    font-size: 30px;
+  }
+
+  .fa {
+    color: $dark;
+  }
 }
 
-.logo {
-  font-size: 41px;
+
+.website-search {
+  text-align: center;
+  h1 {
+  font-size: 5.5em;
+  font-family: $mainFont;
+  font-weight: bolder;
+  margin: 5%;
+  }
 }
 
-.fa {
-  color: $dark;
+.search{
+  text-align: left;
+  position: relative;
+  #search-text-area {
+    width: 69%;
+  }
+  #search-button {
+    background: $slateblue;
+    border-style: none;
+
+  }
 }
 
 .blue-text {
   color: $dark;
-}
-
-div, button{
-  margin: 0 10px;
 }
 
 .location_value {
@@ -38,7 +67,7 @@ div, button{
 
 #btnMyLocation, #btnResetLocation {
   width: 300px;
-  height:50;
+  height: 50;
 }
 
 table > tbody > tr > td.field_name {
@@ -53,9 +82,6 @@ table.empty .help {
   visibility: hidden;
 }
 
-#search-text-area {
-  width: 80%;
-}
 
 
 

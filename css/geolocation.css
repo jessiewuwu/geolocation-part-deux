@@ -1,23 +1,41 @@
 body {
   font-family: "Abel", sans-serif;
+  background: #f3f6f7;
+  margin: 0;
+  overflow-x: hidden; }
+
+.header {
   text-align: center;
-  background: #f3f6f7; }
+  background: #83a5b0; }
+  .header h1#title {
+    color: white;
+    letter-spacing: 1px;
+    font-family: "Crete Round", serif;
+    font-size: 3em; }
+  .header .logo {
+    font-size: 30px; }
+  .header .fa {
+    color: #49666d; }
 
-h1#title {
-  font-family: "Crete Round", serif;
-  font-size: 4.5em; }
+.website-search {
+  text-align: center; }
+  .website-search h1 {
+    font-size: 5.5em;
+    font-family: "Abel", sans-serif;
+    font-weight: bolder;
+    margin: 5%; }
 
-.logo {
-  font-size: 41px; }
-
-.fa {
-  color: #49666d; }
+.search {
+  text-align: left;
+  position: relative; }
+  .search #search-text-area {
+    width: 69%; }
+  .search #search-button {
+    background: #83a5b0;
+    border-style: none; }
 
 .blue-text {
   color: #49666d; }
-
-div, button {
-  margin: 0 10px; }
 
 .location_value {
   color: #83a5b0; }
@@ -34,9 +52,6 @@ table > tbody > tr > td.location_value {
 
 table.empty .help {
   visibility: hidden; }
-
-#search-text-area {
-  width: 80%; }
 
 #map-canvas {
   margin: 0 auto;
