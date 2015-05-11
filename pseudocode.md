@@ -23,7 +23,7 @@ Sunday - design + meeting requirements
 - Add an area for the search form
 - Add a search form and prevent default for the submit button
 - On click, take the value inside of the form and use the API
--
+
 
 
 ## Company Location + My Location
@@ -54,8 +54,8 @@ Sunday - design + meeting requirements
 ## Things To Do
 - Make Google Maps API responsive
 - Make it look prettier and more cohesive
-- Testing
 - ReadMe
 - error-handling for URL:
 ^([a-zA-Z0-9]+(\.[a-zA-Z0-9]+)+.*)$
+- Testing
 
