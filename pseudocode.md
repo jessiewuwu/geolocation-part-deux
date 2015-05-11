@@ -43,3 +43,9 @@ Sunday - design + meeting requirements
   # delete the values inside array[1]: ['user location', lat, long] to ['user location']
 
 
+## Things To Do
+- Make Google Maps API responsive
+- Make it look prettier and more cohesive
+- Testing
+- ReadMe
+- error-handling

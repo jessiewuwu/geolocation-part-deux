@@ -83,18 +83,24 @@ table > tbody > tr > td.location_value {
 table.empty .help {
   visibility: hidden; }
 
-/* ----------- iPhone 4 and 4S ----------- */
+/* ----------- responsiveness on phones, tablets, etc ----------- */
 /* Portrait and Landscape */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   .header {
     font-size: 75%; }
 
-  .website-search h1 {
-    font-size: 2em; }
-  .website-search h3 {
-    font-size: 1.25em; }
-  .website-search #search-text-area {
-    width: 65%; }
+  .website-search {
+    margin-left: 5%;
+    margin-right: 5%; }
+    .website-search h1 {
+      font-size: 2em; }
+    .website-search h3 {
+      font-size: 1.25em; }
+    .website-search #search-text-area {
+      width: 65%; }
+
+  .search {
+    padding-bottom: 3%; }
 
   #btnMyLocation, #btnResetLocation {
     width: 70%;
